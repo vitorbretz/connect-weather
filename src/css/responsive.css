@@ -1,0 +1,90 @@
+@media screen and (max-width:1210px) {
+    header h1{
+        font-size: 1.2rem;
+    }
+    header input {
+        width: 230px;
+    }
+    .menu{
+        width: 300px;
+        font-size: .4rem;
+    }
+    
+}
+@media screen and (max-width:1130px){
+    header h1{
+        font-size: 1.1rem;
+    }
+    .logo {
+        height: 100px;
+        width: 130px;
+    }
+    header input {
+        width: 200px;
+        height: 45px;
+        
+    }
+    header input::placeholder {
+        font-size: .8rem;
+    }
+    header button{
+        height: 62px;
+        width: 60px;
+    }
+   
+}
+@media screen and (max-width:883px){
+    header input {
+        width: 180px;
+        height: 45px;
+        
+    }
+    header h1{
+        font-size: 1rem;
+    }
+   
+}
+@media screen and (max-width:850px){
+    .menu{
+        display: none;
+    }
+   
+    .buttonBurger{
+        display: flex;
+        padding-left: 10px;
+    }
+    .menu-mobile.open-menu{
+        visibility: visible;
+    }
+    .menu-mobile.open-menu ~ .overlay-menu{
+        display: block;
+    }
+}
+@media screen and (max-width:600px){
+    header h1 {
+        display: none;
+
+    }
+    header input {
+        width: 150px;
+        height: 35px;
+        padding-left:0;
+        
+    }
+    header button{
+        height: 50px;
+        width: 50px;
+    }
+    .burger-line{
+        width: 35px ;
+    }
+    .tempResult{
+        width: 70%;
+    }
+}
+@media screen and (max-width:380px){
+   .logo{
+     width: 100px;
+     height: 80px;
+   }
+}

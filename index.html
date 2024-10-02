@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Weather</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="src/img/logo.png" alt="logo nuvem">
+        <h1 class="title"><span>C</span>onnect <span>W</span>eather</h1>
+        <form class="busca" action="">
+            <input type="text" id="searchInput" placeholder="Digite o Local...">
+            <button class="hbutton"><span class="material-symbols-outlined">
+                    search
+                </span></button>
+        </form>
+
+        <nav>
+            <ul class="menu">
+                <a href="#">
+                    <li>Tela Inicial</li>
+                </a>
+                <a href="">
+                    <li>Previsão da Semana</li>
+                </a>
+                <a href="">
+                    <li>Mapa</li>
+                </a>
+                <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/"">
+                    <li>Contato</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="buttonBurger" id="btn-mobile" onclick="animarMenu()">
+            <div class="burger-line"></div>
+			<div class="burger-line"></div>
+			<div class="burger-line"></div>
+        </div>
+        <div class="menu-mobile" id="menu-Mobile">
+            <nav>
+                <ul>
+                    <a href="#">
+                        <li>Tela Inicial</li>
+                    </a>
+                    <a href="">
+                        <li>Previsão da Semana</li>
+                    </a>
+                    <a href="">
+                        <li>Mapa</li>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/"">
+                        <li>Contato</li>
+                    </a>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="overlay-menu" id="menu-shadow"></div>
+
+    </header>
+    
+    <main>
+        <div class="tempResult">
+            <div class="titleR">--</div>
+            <div class="day">--</div>
+
+            <div class="info">
+                <div class="tempTitile">Temperatura</div>
+                <div class="temp">--</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+            </div>
+            <div class="windResult">
+                <div class="windTitle">Vento</div>
+                <div class="wind">--<span>km</span></div>
+                <div class="windArea">
+                    <div class="WindPoint" style="transform: rotate(0deg)"></div>
+                </div>
+
+            </div>
+            <div class="sensationResult">
+                <div class="sensationTitle">sensação térmica</div>
+                <div class="sensation">--</div>
+                <div class="minMax">
+                        <div class="maxS">Máx.</div>
+                        <div class="maxR">--</div>
+                        <div class="minS">Min.</div>
+                        <div class="minR">--</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <div class="aviso"></div>
+
+    <div class="rodape">
+        <p>©2024 - developed by <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/">Bretz Vitor</a>.</p>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
