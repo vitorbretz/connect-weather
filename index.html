@@ -32,13 +32,13 @@
 
         <nav>
             <ul class="menu">
-                <a href="#">
+                <a id="inicial" href="">
                     <li>Tela Inicial</li>
                 </a>
                 <a href="">
                     <li>Previsão da Semana</li>
                 </a>
-                <a href="">
+                <a id="mapC" href="">
                     <li>Mapa</li>
                 </a>
                 <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/"">
@@ -54,13 +54,13 @@
         <div class="menu-mobile" id="menu-Mobile">
             <nav>
                 <ul>
-                    <a href="#">
+                    <a id="inicial" href="">
                         <li>Tela Inicial</li>
                     </a>
                     <a href="">
                         <li>Previsão da Semana</li>
                     </a>
-                    <a href="">
+                    <a id="mapC" href="">
                         <li>Mapa</li>
                     </a>
                     <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/"">
@@ -77,24 +77,26 @@
     <main>
         <div class="tempResult">
             <div class="titleR">--</div>
-            <div class="day">--</div>
+            <br>
+    
 
             <div class="info">
-                <div class="tempTitile">Temperatura</div>
-                <div class="temp">--</div>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+                <div class="tempTitle">Temperatura</div>
+                <div class="temp">-- <sup>ºC</sup></div>
+                <img  src="http://openweathermap.org/img/wn/10d@2x.png" />
             </div>
             <div class="windResult">
                 <div class="windTitle">Vento</div>
-                <div class="wind">--<span>km</span></div>
+                <div class="wind">-- <span>km/h</span></div>
                 <div class="windArea">
                     <div class="WindPoint" style="transform: rotate(0deg)"></div>
                 </div>
+               
 
             </div>
             <div class="sensationResult">
-                <div class="sensationTitle">sensação térmica</div>
-                <div class="sensation">--</div>
+                <div class="sensationTitle">Sensação Térmica</div>
+                <div class="sensation">-- <sup>º</sup></div>
                 <div class="minMax">
                         <div class="maxS">Máx.</div>
                         <div class="maxR">--</div>
@@ -110,6 +112,7 @@
     <div class="rodape">
         <p>©2024 - developed by <a href="https://www.linkedin.com/in/vitor-bretz-73a93a262/">Bretz Vitor</a>.</p>
     </div>
+    <div id="map"></div>
 
 
 </body>

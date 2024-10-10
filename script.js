@@ -17,6 +17,9 @@ function animarMenu(){
 }
 // resultado do main
 
+
+
+
 document.querySelector(".busca").addEventListener("submit",async (event)=>{
     event.preventDefault();
 
@@ -29,7 +32,22 @@ document.querySelector(".busca").addEventListener("submit",async (event)=>{
        let results = await fetch(url);
        let json = await results.json();
 
-       
+       if (json.cod === 200) {
+        showInfo({
+            name: json.name,
+            country: json.sys.country,
+            temp: json.main.temp,
+            tempIcon: json.weather[0].icon,
+            windSpeed: json.wind.speed,
+            windAngle: json.wind.deg,
+            sensation: json.main.feels_like,
+            tempMax: json.main.temp_max,
+            tempMin: json.main.temp_min
+
+        });
+       }else {
+        showWarning("Não encontramos esta localização.")
+       }
        
        
     } else {
@@ -40,3 +58,26 @@ document.querySelector(".busca").addEventListener("submit",async (event)=>{
 function showWarning(msg){
     document.querySelector(".aviso").innerHTML = msg;
 }
+
+function showInfo(json){
+    showWarning("");
+    document.querySelector("main").style.display = "block";
+
+    document.querySelector(".titleR").innerHTML = `${json.name}, ${json.country}`;
+    document.querySelector(".temp").innerHTML = `${json.temp} <sup>ºC</sup>`;
+    document.querySelector(".wind").innerHTML = `${json.windSpeed} <span>km/h</span>`;
+
+    document.querySelector(".info img").setAttribute("src", `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`)
+
+    document.querySelector(".WindPoint").style.transform = `rotate(${json.windAngle-90}deg)`;
+
+    document.querySelector(".sensation").innerHTML = `${json.sensation} <sup>º</sup>`;
+
+    document.querySelector(".maxR").innerHTML = `${json.tempMax} <sup>º</sup>`;
+    document.querySelector(".minR").innerHTML = `${json.tempMin} <sup>º</sup>`;
+
+}
+document.querySelector(".inicial").addEventListener("click",()=>{
+    history.back();
+});
+

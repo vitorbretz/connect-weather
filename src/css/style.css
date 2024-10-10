@@ -228,14 +228,14 @@ header::after{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #7d7c7b84;
+    background-color: #6665658d;
     width: 40%;
     margin: 0 auto;
     font-family: "Poppins", system-ui;
     font-weight: 300;
     font-style: normal;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 10px;
     border-radius: 15px;
     box-shadow: 1px 1px 5px #000;
     color: #fff;
@@ -243,12 +243,10 @@ header::after{
 }
 
 .titleR {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
-.day {
-    font-size: 2rem;
-}
 
 
 
@@ -270,11 +268,18 @@ main .info {
     flex-direction: column;
     align-items: center;
 }
+.tempTitle{
+    font-size: 1.3rem;
+}
 
 
 main .info .temp {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    text-align: end;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
     margin-top: 5px;
 }
 
@@ -286,7 +291,13 @@ main .info img {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 1.3rem
+    ;
+    font-weight: 300;
+}
+.sensationTitle{
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .windResult {
@@ -294,14 +305,32 @@ main .info img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-right: 60px;
+}
+.windArea {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.WindPoint {
+    width: 15px;
+    height: 1px;
+    background-color: #FFF;
+    transform-origin: left;
 }
 .minMax{
     display: flex;
     gap: 10px;
-    font-size: 15px;
+    font-size: .8rem;
 }
+
 .aviso{
     text-align: center;
     width: 100%;
@@ -423,3 +452,4 @@ main .info img {
         transform: translateX(0);
     }
 }
+----
