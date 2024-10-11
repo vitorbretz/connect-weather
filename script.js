@@ -13,7 +13,7 @@ menu.addEventListener("click", animarMenu)
 
 function animarMenu(){
     menu.classList.toggle("open-menu")
-    btn.classList.toggle("active")
+    btnMenu.classList.toggle("active")
 }
 // resultado do main
 
@@ -77,7 +77,7 @@ function showInfo(json){
     document.querySelector(".minR").innerHTML = `${json.tempMin} <sup>º</sup>`;
 
 }
-document.querySelector(".inicial").addEventListener("click",()=>{
+document.getElementById("inicial").addEventListener('click',()=>{
     history.back();
 });
 
